@@ -1,4 +1,4 @@
-//Max and min
+//Finds the max value of an array of numbers
 const max = function(numbers) {
 
   let currentMax = numbers[0];
@@ -16,6 +16,7 @@ const max = function(numbers) {
   return currentMax;
 }
 
+//Finds the min value of an array of numbers
 const min = function(numbers) {
 
   let currentMin = numbers[0];
@@ -34,7 +35,7 @@ const min = function(numbers) {
 }
 
 
-//Average
+//Finds the average of an array of numbers
 const average = function(numbers) {
   // your code goes here
   let average = 0;
@@ -83,7 +84,7 @@ const fizzBuzz = function(countTo) {
 }
 
 
-//Repeat function
+//Repeat function repeats given function n times
 const repeat = function(fn, n) {
   for(let i = 0; i < n; i++) {
     fn();
@@ -99,6 +100,36 @@ const goodbye = function() {
 }
 
 
+// DO NOT EDIT BETWEEN THESE LINES ----->
+// Return only names that begin with 'R'
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+const filteredNames = filter(myNames, function(name) {
+    // This is a "predicate function" - it's a function that only returns a boolean
+    return name[0] === 'R';
+});
+
+console.log(filteredNames) // => ['Rich', 'Ray']
+// <---- DO NOT EDIT BETWEEN THESE LINES
+
+// TASK: DEFINE YOUR FILTER FUNCTION BELOW:
+function filter(arr, fn) {
+  let newArray = [];
+
+  arr.forEach(function(elem){
+    if(fn(elem)){
+      newArray.push(elem);
+    }
+  });
+
+  return newArray;
+}
+
+//Extra Credit Attempt
+
+const filteredNames2 = console.log(filter(myNames, (name) => (name[0] === 'R')));
+
+//Extra Credit Attempt
 
 
 let numb = [12, 32 , 34, 2, 56, 7];
