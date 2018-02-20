@@ -52,7 +52,7 @@ const average = function(numbers) {
 
 
 //FizzBuzz
-function fizzBuzz(countTo) {
+const fizzBuzz = function(countTo) {
 
   let list = [];
   
@@ -81,6 +81,9 @@ function fizzBuzz(countTo) {
   
   return list;
 }
+
+
+
 
 
 
