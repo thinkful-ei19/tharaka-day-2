@@ -1,10 +1,6 @@
+//Max and min
 const max = function(numbers) {
-  // we set `currentMax` to the value
-  // of first item in `numbers`,
-  // then we loop through `numbers`,
-  // comparing each item to `currentMax`.
-  // if the item is greater than `currentMax`,
-  // we set `currentMax` to that number.
+
   let currentMax = numbers[0];
   let i = 0;
 
@@ -21,12 +17,7 @@ const max = function(numbers) {
 }
 
 const min = function(numbers) {
-  // we set `currentMin` to the value
-  // of first item in `numbers`,
-  // then we loop through `numbers`,
-  // comparing each item to `currentMin`.
-  // if the item is less than `currentMin`,
-  // we set `currentMin` to that number.
+
   let currentMin = numbers[0];
   let j = 0;
 
@@ -43,9 +34,33 @@ const min = function(numbers) {
 }
 
 
+//Average
+const average = function(numbers) {
+  // your code goes here
+  let average = 0;
+  let sum = 0;
+  
+  numbers.forEach(function(num){
+    sum += num;
+  })
+
+  average = sum / numbers.length;
+  
+  return average;
+  
+}
+
+
+
+
+
+
+
 let numb = [12, 32 , 34, 2, 56, 7];
 
-maxNum = max(numb);
-minNum = min(numb); 
-console.log(maxNum, minNum);
+let maxNum = max(numb);
+let minNum = min(numb); 
+let aveNum = average(numb);
+
+console.log(maxNum, minNum, aveNum);
 
