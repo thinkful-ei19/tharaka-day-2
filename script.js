@@ -61,16 +61,16 @@ const fizzBuzz = function(countTo) {
     
     if((i % 3 === 0) && (i % 5 === 0)) 
     {
-      list.push("fizzbuzz")
+      list.push('fizzbuzz')
     } 
     
     else if((i % 3 === 0) && (i % 5 !== 0)) 
     {
-      list.push("fizz");
+      list.push('fizz');
     }
     
     else if((i % 3 !== 0) && (i % 5 === 0)){
-      list.push("buzz");
+      list.push('buzz');
     }
     
     else 
@@ -83,9 +83,20 @@ const fizzBuzz = function(countTo) {
 }
 
 
+//Repeat function
+const repeat = function(fn, n) {
+  for(let i = 0; i < n; i++) {
+    fn();
+  }
+}
 
+const hello = function() {
+  console.log('Hello world');
+}
 
-
+const goodbye = function() {
+  console.log('Goodbye world');
+}
 
 
 
@@ -99,4 +110,6 @@ let fizBuz = fizzBuzz(15);
 
 console.log(maxNum, minNum, aveNum);
 console.log(fizBuz);
+repeat(hello, 5);
+repeat(goodbye, 5);
 
