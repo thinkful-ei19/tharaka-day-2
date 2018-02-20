@@ -132,6 +132,48 @@ const filteredNames2 = console.log(filter(myNames, (name) => (name[0] === 'R')))
 //Extra Credit Attempt
 
 
+//
+const hazardWarningCreator = function(typeOfWarning) {
+
+  let warningCounter = 0;
+  
+
+  return function(location) {
+    let times = '';
+    warningCounter++;
+
+    //Extra Credit Attempt
+    if(warningCounter >= 2 || warningCounter === 0) {
+      times = 'times';
+    } else if(warningCounter === 1) {
+      times = 'time';
+    } 
+
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${times} today!`);
+
+  }
+}
+
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const zombieWarning = hazardWarningCreator('Unusual amount of zombies');
+const diamondStorm = hazardWarningCreator('Diamond hurricane on the way');
+
+rocksWarning('Main St and Pacific Ave');
+// => DANGER There is a Rocks on the Road hazard at Main St and Pacific Ave
+// => The Rocks on the Road hazard has triggered 1 time(s) today!
+
+rocksWarning('Centinela Ave and Olympic Blvd');
+// => DANGER There is a Rocks on the Road hazard at Centinela Ave and Olympic Blvd
+// => The Rocks on the Road hazard has triggered 2 time(s) today!
+
+zombieWarning('Central hospital');//1
+zombieWarning('Lied Library')//2
+
+diamondStorm('Uranus')//1
+diamondStorm('Neptune')//2
+
 let numb = [12, 32 , 34, 2, 56, 7];
 
 let maxNum = max(numb);
