@@ -51,6 +51,37 @@ const average = function(numbers) {
 }
 
 
+//FizzBuzz
+function fizzBuzz(countTo) {
+
+  let list = [];
+  
+  for(let i = 1; i <= countTo; i++) {
+    
+    
+    if((i % 3 === 0) && (i % 5 === 0)) 
+    {
+      list.push("fizzbuzz")
+    } 
+    
+    else if((i % 3 === 0) && (i % 5 !== 0)) 
+    {
+      list.push("fizz");
+    }
+    
+    else if((i % 3 !== 0) && (i % 5 === 0)){
+      list.push("buzz");
+    }
+    
+    else 
+    {
+      list.push(i);
+    }
+  }
+  
+  return list;
+}
+
 
 
 
@@ -61,6 +92,8 @@ let numb = [12, 32 , 34, 2, 56, 7];
 let maxNum = max(numb);
 let minNum = min(numb); 
 let aveNum = average(numb);
+let fizBuz = fizzBuzz(15);
 
 console.log(maxNum, minNum, aveNum);
+console.log(fizBuz);
 
