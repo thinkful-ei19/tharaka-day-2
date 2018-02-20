@@ -52,7 +52,7 @@ const average = function(numbers) {
 }
 
 
-//FizzBuzz
+//Inserts fizz, buzz, or fizzbuzz according to the index
 const fizzBuzz = function(countTo) {
 
   let list = [];
@@ -132,7 +132,7 @@ const filteredNames2 = console.log(filter(myNames, (name) => (name[0] === 'R')))
 //Extra Credit Attempt
 
 
-//
+
 const hazardWarningCreator = function(typeOfWarning) {
 
   let warningCounter = 0;
@@ -156,6 +156,39 @@ const hazardWarningCreator = function(typeOfWarning) {
 }
 
 
+//Takes in a array of steps, removes negative steps and logs total positve steps took in each sub-array
+const turtleSteps = function(steps) {
+
+  let positiveArray = steps.filter(steps => (steps[0] >= 0 && steps[1] >= 0));
+  let newSteps = positiveArray.map(positiveArray => (positiveArray[0] + positiveArray[1]));
+  newSteps.forEach(item => console.log(item));
+
+}
+
+
+
+const decodeFunc = function(str) {
+
+  let arr = str.split(' ');
+
+  let arr2 = arr.reduce(function(acm, curr){
+  
+    if(curr.length === 3) {
+      return acm + ' ';
+    } 
+
+    return acm + curr[curr.length - 1].toUpperCase();
+
+
+  }, '');
+
+  return arr2;
+
+}
+
+
+
+
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const zombieWarning = hazardWarningCreator('Unusual amount of zombies');
 const diamondStorm = hazardWarningCreator('Diamond hurricane on the way');
@@ -175,6 +208,8 @@ diamondStorm('Uranus')//1
 diamondStorm('Neptune')//2
 
 let numb = [12, 32 , 34, 2, 56, 7];
+let directions = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let sentence = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 
 let maxNum = max(numb);
 let minNum = min(numb); 
@@ -185,4 +220,5 @@ console.log(maxNum, minNum, aveNum);
 console.log(fizBuz);
 repeat(hello, 5);
 repeat(goodbye, 5);
-
+turtleSteps(directions);
+let ans = console.log(decodeFunc(sentence));
